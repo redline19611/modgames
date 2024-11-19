@@ -340,11 +340,6 @@
       const progressBar = document.getElementById('progressBar');
       const progress = document.getElementById('progress');
 
-      // Disable double-tap zoom on buttons for mobile
-      downloadBtn.addEventListener('touchend', (e) => {
-        e.preventDefault();
-      });
-
       // Handle download button click
       downloadBtn.addEventListener('click', () => {
         // Provide immediate feedback
